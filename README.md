@@ -1,7 +1,9 @@
-**Tic-Tac-Toe**  
+**Mines Weeper**  
 CS50’s Introduction to Artificial Intelligence with Python  
 --------------------------------------------------------------  
-Using Minimax, implement an AI to play Tic-Tac-Toe optimally. 
+AI that can play Minesweeper.  
+Recall that knowledge-based agents make decisions by considering their knowledge base,  
+and making inferences based on that knowledge.  
   
 Made By th30c05 
   
