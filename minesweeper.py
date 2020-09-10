@@ -131,6 +131,7 @@ class Sentence():
         a cell is known to be a mine.
         """
         raise NotImplementedError
+        # TODO
 
     def mark_safe(self, cell):
         """
@@ -138,6 +139,7 @@ class Sentence():
         a cell is known to be safe.
         """
         raise NotImplementedError
+        # TODO
 
 
 class MinesweeperAI():
@@ -195,6 +197,7 @@ class MinesweeperAI():
                if they can be inferred from existing knowledge
         """
         raise NotImplementedError
+        # TODO
 
     def make_safe_move(self):
         """
@@ -206,6 +209,7 @@ class MinesweeperAI():
         and self.moves_made, but should not modify any of those values.
         """
         raise NotImplementedError
+        # TODO
 
     def make_random_move(self):
         """
@@ -215,3 +219,4 @@ class MinesweeperAI():
             2) are not known to be mines
         """
         raise NotImplementedError
+        # TODO
