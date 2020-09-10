@@ -113,8 +113,6 @@ class Sentence():
 
         return known_mines
 
-
-
     def known_safes(self):
         """
         Returns the set of all cells in self.cells known to be safe.
