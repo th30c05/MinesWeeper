@@ -108,9 +108,8 @@ class Sentence():
         known_mines = set()
 
         for cell in self.cells:
-            for mines in self.mines:
-                if cell == mines:
-                    known_mines.add(cell)
+            if cell in Minesweeper().mines:
+                known_mines.add(cell)
 
         return known_mines
 
