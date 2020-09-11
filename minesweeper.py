@@ -152,8 +152,18 @@ class Sentence():
         Updates internal knowledge representation given the fact that
         a cell is known to be safe.
         """
-        raise NotImplementedError
-        # TODO
+        if cell not in self.cells:
+            return
+
+        updated = set()
+
+        for acell in self.cells:
+            if acell == cell:
+                continue
+            updated.add(acell)
+
+        self.cells = updated
+        return
 
 
 class MinesweeperAI():
