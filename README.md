@@ -7,4 +7,4 @@ and making inferences based on that knowledge.
   
 Made By th30c05 
   
-Video:  
+Video: [YouTube](https://www.youtube.com/watch?v=2Tuyl8fcEMQ)
