@@ -120,7 +120,7 @@ class Sentence():
         known_safes = set()
 
         for cell in self.cells:
-            if not cell in Minesweeper().mines:
+            if not cell in Minesweeper().mines and cell in (range(0, 8, 1), range(0, 8, 1)):
                 known_safes.add(cell)
 
         return known_safes
@@ -224,8 +224,8 @@ class MinesweeperAI():
         self.mark_safe(cell)
         self.knowledge.append(Sentence(cell, count))
         for sentence in self.knowledge:
-            safe = Sentence.known_safes()
-            mine = Sentence.known_mines()
+            safe = sentence.known_safes()
+            mine = sentence.known_mines()
             if safe is not None:
                 self.safes = self.safes.union(safe)
             if mine is not None:
@@ -269,5 +269,14 @@ class MinesweeperAI():
             1) have not already been chosen, and
             2) are not known to be mines
         """
-        raise NotImplementedError
-        # TODO
+        cells = []
+        for i in range(0, 8, 1):
+            for j in range(0, 8, 1):
+                cell = (i, j)
+                if cell not in self.moves_made and cell not in self.mines and cell not in cells:
+                    cells.append(cell)
+
+        if not len(cells) == 0:
+            return random.choice(cells)
+        else:
+            return None
